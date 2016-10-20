@@ -15,6 +15,7 @@ public class EnemyMovement : MonoBehaviour
         //playerHealth = player.GetComponent <PlayerHealth> ();
         //enemyHealth = GetComponent <EnemyHealth> ();
         nav = GetComponent <NavMeshAgent> ();
+		nav.destination = player.position;
     }
 
 
@@ -22,7 +23,8 @@ public class EnemyMovement : MonoBehaviour
     {
         //if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
         //{
-            nav.SetDestination (player.position);
+//            nav.SetDestination (player.position);
+		nav.destination = player.position;
         //}
         //else
         //{
