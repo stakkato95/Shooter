@@ -14,8 +14,9 @@ namespace CompleteProject
         void Awake ()
         {
             // Set up the references.
-            player = GameObject.FindGameObjectWithTag ("Player").transform;
-            playerHealth = player.GetComponent <PlayerHealth> ();
+			var playerGameObject = GameObject.FindGameObjectWithTag("Player");
+			player = playerGameObject.transform;
+			playerHealth = playerGameObject.GetComponent <PlayerHealth> ();
             enemyHealth = GetComponent <EnemyHealth> ();
             nav = GetComponent <NavMeshAgent> ();
         }
